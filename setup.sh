@@ -247,6 +247,6 @@ pnpm install || {
 success "Ducky successfully installed!"
 
 success "Setup complete! Please reboot your system for changes to take effect."
-note "Simply type 'reboot' in your terminal to reboot your system."
+note "Simply type 'reboot' in your terminal to do so."
 note "After rebooting, follow the instructions in the NEXT_STEPS.md file to complete the installation."
 

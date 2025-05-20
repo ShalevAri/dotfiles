@@ -61,13 +61,25 @@ if ! pacman -Qqg base-devel &>/dev/null; then
 fi
 
 # Install packages
-note "Installing packages..."
-sudo pacman -S --noconfirm "${PACKAGES[@]}"
-if [ $? -ne 0 ]; then
-  error "An error occurred while trying to install packages. Aborting."
-  exit 1
+note "Checking for packages that are not yet installed..."
+TO_INSTALL=()
+for pkg in "${PACKAGES[@]}"; do
+  if ! pacman -Qi "$pkg" &>/dev/null; then
+    TO_INSTALL+=("$pkg")
+  fi
+done
+
+if [ ${#TO_INSTALL[@]} -eq 0 ]; then
+  success "All packages are already installed!"
+else
+  note "Installing packages: ${TO_INSTALL[*]}..."
+  sudo pacman -S --noconfirm "${TO_INSTALL[@]}"
+  if [ $? -ne 0 ]; then
+    error "An error occurred while trying to install packages. Aborting."
+    exit 1
+  fi
+  success "All packages installed successfully!"
 fi
-success "All packages installed successfully!"
 
 # Install Paru (AUR helper)
 note "Checking for Paru (AUR helper)..."

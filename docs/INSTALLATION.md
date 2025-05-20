@@ -18,13 +18,13 @@ The below command will immediately run the script upon downloading it.
 Only run the command if you trust me or have already verified the script.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ShalevAri/arch-dots/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ShalevAri/dotfiles/main/setup.sh | bash
 ```
 
 If you want to only download the script and run it later manually, for example after verifying it, you can use the commands below.
 
 ```bash
-curl -LO https://raw.githubusercontent.com/ShalevAri/arch-dots/main/install.sh # Download the script
+curl -LO https://raw.githubusercontent.com/ShalevAri/dotfiles/main/setup.sh # Download the script
 ```
 
 You can now verify the script.
@@ -32,9 +32,9 @@ You can now verify the script.
 After you're done:
 
 ```bash
-chmod +x install.sh # Make the script executable
+chmod +x setup.sh # Make the script executable
 ```
 
 ```bash
-./install.sh # Run the script
+./setup.sh # Run the script
 ```

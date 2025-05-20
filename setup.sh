@@ -41,7 +41,7 @@ fi
 # Define variables
 PACKAGES=("bat" "blueman" "bluez" "bluez-tools" "bluez-utils" "cava" "eza" "fastfetch" "fd" "fish" "fzf" "ghostty" "nautilus" "git" "hyprlock" "hyprpaper" "jujutsu" "lazygit" "neovim" "pnpm" "ripgrep" "starship" "stow" "tmux" "waybar" "zoxide" "ttf-font-awesome" "papirus-icon-theme" "rofi-wayland" "rofi-emoji" "rofi-calc" "dunst" "font-manager" "emacs" "wlogout")
 DOTFILES_DIR="$HOME/.dotfiles"
-GITHUB_REPO="ShalevAri/arch-hyprland-dots"
+GITHUB_REPO="ShalevAri/dotfiles"
 
 is_installed() {
   pacman -Q "$1" &>/dev/null

@@ -1,0 +1,47 @@
+{
+    "custom/arch": {
+        "format": "󰣇",
+        "tooltip": true,
+        "tooltip-format": "btw"
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+    "network": {
+        "format-wifi": "<span size='13000'>  </span>{signalStrength}% ",
+        "format-ethernet": "<span size='13000'>󰤭  </span> Disconnected",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "<span size='13000'>  </span>Disconnected",
+        "tooltip-format-wifi": "Signal Strength: {signalStrength}%"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%  {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "clock": {
+        "format": "{:%I:%M}",
+        "tooltip-format": "<big>{:%Y-%m-%d}</big>"
+    }
+}
